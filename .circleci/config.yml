@@ -26,7 +26,8 @@ jobs:
       - checkout
 
       
-      - run: git clone --depth 1 https://github.com/waghsk/i2b2-quickstart;
+      - run: export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64;
+             git clone --depth 1 https://github.com/waghsk/i2b2-quickstart;
              ls;cd /home/circleci/repo/i2b2-quickstart; ls; 
              mkdir -p unzipped_packages/i2b2-data-master/;
              cp -rf ../edu.harvard.i2b2.data unzipped_packages/i2b2-data-master/;
