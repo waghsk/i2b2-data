@@ -25,5 +25,7 @@ jobs:
       - checkout
 
       
-      - run: git clone --depth 1 https://github.com/waghsk/i2b2-quickstart;ls;cd i2b2-quickstart; ls; bash scripts/docker/create_i2b2_network.sh  ~/i2b2-quickstart localhost |tee firstlog
+      - run: git clone --depth 1 https://github.com/waghsk/i2b2-quickstart;
+      ls;cd /home/circleci/repo/i2b2-quickstart; ls; 
+      bash scripts/docker/create_i2b2_network.sh  ~/i2b2-quickstart localhost |tee firstlog
              #mvn dependency:go-offline
