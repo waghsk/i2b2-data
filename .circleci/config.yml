@@ -34,6 +34,7 @@ jobs:
              ls -hla;
              pwd;
              
+             
              #source scripts/install/install.sh
              #mkdir -p /home/circleci/repo/i2b2-quickstart/local/docker/i2b2-wildfly;
              #mkdir -p /home/circleci/repo/i2b2-quickstart/local/docker/i2b2-web;
