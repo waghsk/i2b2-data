@@ -32,6 +32,9 @@ jobs:
              ls -l /home/circleci/repo/i2b2-quickstart/packages;
              mkdir -p /home/circleci/repo/i2b2-quickstart/local/docker/i2b2-wildfly;
              mkdir -p /home/circleci/repo/i2b2-quickstart/local/docker/i2b2-web;
+             ls -hla;
+             pwd;
+             
              #source scripts/install/install.sh
              #bash scripts/docker/create_release_image.sh /home/circleci/repo/i2b2-quickstart pg
              
