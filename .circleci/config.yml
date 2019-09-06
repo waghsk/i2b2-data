@@ -38,6 +38,7 @@ jobs:
              cd /home/circleci/repo/i2b2-quickstart;
              ls -l local;
              echo "JAVA_HOME:$JAVA_HOME";
+             docker ps -a;
              
              
              #source scripts/install/install.sh
