@@ -27,16 +27,18 @@ jobs:
       
       - run: git clone --depth 1 https://github.com/waghsk/i2b2-quickstart;
              ls;cd /home/circleci/repo/i2b2-quickstart; ls; 
-             bash scripts/install/create_mssql_release.sh;
-             ls -l /home/circleci/repo/i2b2-quickstart/zipped_packages;
-             ls -l /home/circleci/repo/i2b2-quickstart/packages;
-             mkdir -p /home/circleci/repo/i2b2-quickstart/local/docker/i2b2-wildfly;
-             mkdir -p /home/circleci/repo/i2b2-quickstart/local/docker/i2b2-web;
+             mkdir -p local/unzipped_packages/i2b2-data-master/;
+             cp -rf ../edu.harvard.i2b2.data local/unzipped_packages/i2b2-data-master/  
+             bash scripts/install/create_mssql_release.sh;             
              ls -hla;
              pwd;
              
              #source scripts/install/install.sh
+             #mkdir -p /home/circleci/repo/i2b2-quickstart/local/docker/i2b2-wildfly;
+             #mkdir -p /home/circleci/repo/i2b2-quickstart/local/docker/i2b2-web;
              #bash scripts/docker/create_release_image.sh /home/circleci/repo/i2b2-quickstart pg
+             #ls -l /home/circleci/repo/i2b2-quickstart/zipped_packages;
+             #ls -l /home/circleci/repo/i2b2-quickstart/packages;
              
              #bash scripts/docker/create_i2b2_network.sh /home/circleci/repo/i2b2-quickstart localhost |tee firstlog
              #mvn dependency:go-offline
