@@ -24,22 +24,6 @@ jobs:
       - setup_remote_docker
       - checkout
 
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "pom.xml" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-
-      - run: git clone --depth 1 https://github.com/waghsk/i2b2-quickstart;
-             cd i2b2-quickstart;
-             sh scripts/docker/create_i2b2_network.sh  ~/i2b2-quickstart $IP |tee firstlog
+      
+      - run: git clone --depth 1 https://github.com/waghsk/i2b2-quickstart;cd i2b2-quickstart;sh scripts/docker/create_i2b2_network.sh  ~/i2b2-quickstart $IP |tee firstlog
              #mvn dependency:go-offline
-
-      - save_cache:
-          paths:
-            - ~/.m2
-          key: v1-dependencies-{{ checksum "pom.xml" }}
-
-      # run tests!
-      - run: mvn integration-test
