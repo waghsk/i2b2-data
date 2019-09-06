@@ -29,4 +29,4 @@ jobs:
              ls;cd /home/circleci/repo/i2b2-quickstart; ls; 
              #bash scripts/docker/create_i2b2_network.sh /home/circleci/repo/i2b2-quickstart localhost |tee firstlog
              #mvn dependency:go-offline
-             /bin/sh scripts/docker/create_release_image.sh /home/circleci/repo/i2b2-quickstart pg
+             bash scripts/docker/create_release_image.sh /home/circleci/repo/i2b2-quickstart pg
