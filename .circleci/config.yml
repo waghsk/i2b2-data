@@ -33,8 +33,11 @@ jobs:
              cp -rf ../edu.harvard.i2b2.data unzipped_packages/i2b2-data-master/;
              ls -l /home/circleci/repo/i2b2-quickstart/unzipped_packages/i2b2-data-master/;
              bash scripts/install/create_mssql_release.sh;             
-             ls -hla;
+             ls -l;
              pwd;
+             cd /home/circleci/repo/i2b2-quickstart;
+             ls -l local;
+             echo "JAVA_HOME:$JAVA_HOME";
              
              
              #source scripts/install/install.sh
