@@ -22,14 +22,14 @@ jobs:
 
     steps:
       - setup_remote_docker
-      #- checkout
+      - checkout
 
       
       - run: git clone --depth 1 https://github.com/waghsk/i2b2-quickstart;
              ls;cd /home/circleci/repo/i2b2-quickstart; ls; 
-             bash scripts/install/create_mssql_release.sh
-             ls -l /home/circleci/repo/i2b2-quickstart/zipped_packages
-             ls -l /home/circleci/repo/i2b2-quickstart/packages
+             bash scripts/install/create_mssql_release.sh;
+             ls -l /home/circleci/repo/i2b2-quickstart/zipped_packages;
+             ls -l /home/circleci/repo/i2b2-quickstart/packages;
              mkdir -p /home/circleci/repo/i2b2-quickstart/local/docker/i2b2-wildfly;
              mkdir -p /home/circleci/repo/i2b2-quickstart/local/docker/i2b2-web;
              #source scripts/install/install.sh
