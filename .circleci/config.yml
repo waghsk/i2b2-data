@@ -25,11 +25,11 @@ jobs:
       #- checkout
 
       
-      - run: source $BASH_ENV;
-             git clone --depth 1 https://github.com/waghsk/i2b2-quickstart;
+      - run: git clone --depth 1 https://github.com/waghsk/i2b2-quickstart;
              ls;cd /home/circleci/repo/i2b2-quickstart; ls; 
              mkdir -p /home/circleci/repo/i2b2-quickstart/local/docker/i2b2-wildfly;
              mkdir -p /home/circleci/repo/i2b2-quickstart/local/docker/i2b2-web;
+             source scripts/install/install.sh
              bash scripts/docker/create_release_image.sh /home/circleci/repo/i2b2-quickstart pg
              
              #bash scripts/docker/create_i2b2_network.sh /home/circleci/repo/i2b2-quickstart localhost |tee firstlog
