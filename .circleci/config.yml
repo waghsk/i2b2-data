@@ -31,8 +31,8 @@ jobs:
             - v1-dependencies-
 
       - run: git clone --depth 1 https://github.com/waghsk/i2b2-quickstart
-             cd i2b2-quickstart
-             sh scripts/docker/create_i2b2_network.sh  ~/i2b2-quickstart $IP |tee firstlog
+      - run: cd i2b2-quickstart
+      - run: sh scripts/docker/create_i2b2_network.sh  ~/i2b2-quickstart $IP |tee firstlog
              #mvn dependency:go-offline
 
       - save_cache:
