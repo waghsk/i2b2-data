@@ -29,6 +29,7 @@ jobs:
              ls;cd /home/circleci/repo/i2b2-quickstart; ls; 
              mkdir -p local/unzipped_packages/i2b2-data-master/;
              cp -rf ../edu.harvard.i2b2.data local/unzipped_packages/i2b2-data-master/;
+             ls -l /home/circleci/repo/i2b2-quickstart/unzipped_packages/i2b2-data-master/;
              bash scripts/install/create_mssql_release.sh;             
              ls -hla;
              pwd;
