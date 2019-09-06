@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - setup_remote_docker
-      - checkout
+      #- checkout
 
       
       - run: git clone --depth 1 https://github.com/waghsk/i2b2-quickstart;
